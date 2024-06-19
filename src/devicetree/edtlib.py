@@ -2063,7 +2063,7 @@ class EDT:
 
         if dts is not None:
             try:
-                self._dt = DT(dts)
+                self._dt = DT(dts, self.bindings_dirs)
             except DTError as e:
                 raise EDTError(e) from e
             self._finish_init()
